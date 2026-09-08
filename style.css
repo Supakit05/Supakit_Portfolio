@@ -552,8 +552,15 @@ dd {
     font-size: .73rem
 }
 
-.contact-links b {
+.contact-icon {
+    width: 19px;
+    height: 19px;
     color: #9cb6ff
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round
 }
 
 footer {
@@ -1068,4 +1075,42 @@ footer>span {
 
 .availability {
     display: none
+}
+
+/* Keep the complete introduction comfortably centred on compact phones such as iPhone 13. */
+@media (max-width: 430px) {
+    .hero {
+        min-height: 100svh;
+        place-content: center;
+        gap: 24px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .portrait-wrap {
+        width: min(58vw, 230px);
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        margin: 12px 0 16px;
+    }
+
+    .intro {
+        font-size: .96rem;
+        line-height: 1.7;
+    }
+
+    .quick-facts {
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .quick-facts b {
+        font-size: .74rem;
+    }
+
+    .quick-facts span {
+        font-size: .67rem;
+    }
 }
