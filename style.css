@@ -555,8 +555,10 @@ dd {
 .contact-icon {
     display: block;
     flex: 0 0 19px;
+    min-width: 19px;
     width: 19px;
     height: 19px;
+    justify-self: end;
     color: #9cb6ff;
     fill: none;
     stroke: currentColor;
@@ -565,8 +567,8 @@ dd {
     stroke-linejoin: round
 }
 
-/* iPad Pro 10.5 in portrait is too narrow for the desktop hero columns. */
-@media (min-width: 761px) and (max-width: 900px) {
+/* Keep iPad Pro 10.5 layouts stable in both portrait and landscape. */
+@media (min-width: 761px) and (max-width: 1199px) {
     .hero {
         grid-template-columns: 1fr;
         gap: 34px;
