@@ -460,6 +460,44 @@ dd {
     font: 700 .72rem Syne
 }
 
+.timeline article.education-entry {
+    display: block
+}
+
+.education-content>h3 {
+    margin-left: 230px
+}
+
+.education-details {
+    margin-top: 20px;
+}
+
+.education-details section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    padding: 12px 0
+}
+
+.education-details .education-year {
+    color: var(--accent);
+    font: 700 .7rem Syne, "Noto Sans Thai", sans-serif
+}
+
+.education-details .education-year span {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font: 600 .68rem "DM Sans", "Noto Sans Thai", sans-serif;
+    letter-spacing: .02em
+}
+
+.education-details section>p:not(.education-year) {
+    color: var(--muted);
+    font-size: .85rem;
+    line-height: 1.8
+}
+
 .timeline h3 {
     font: 700 1.1rem Syne, "Noto Sans Thai";
     margin-bottom: 7px
@@ -599,7 +637,7 @@ dialog>#modal-summary {
 
 @media(max-width:760px) {
     .hero {
-        min-height: auto;
+        min-height: 100svh;
         padding-top: 67px;
         padding-bottom: 58px;
         grid-template-columns: 1fr;
@@ -685,6 +723,15 @@ dialog>#modal-summary {
         gap: 7px
     }
 
+    .education-content>h3 {
+        margin-left: 0
+    }
+
+    .education-details section {
+        grid-template-columns: 1fr;
+        gap: 7px
+    }
+
     .contact {
         padding-top: 72px;
         padding-bottom: 72px
@@ -747,6 +794,11 @@ dialog>#modal-summary {
     background: #f1f4fa
 }
 
+.certificate-list {
+    display: grid;
+    gap: 24px
+}
+
 .certificate-card {
     display: grid;
     grid-template-columns: 1.15fr .85fr;
@@ -756,6 +808,30 @@ dialog>#modal-summary {
     border-radius: 16px;
     background: #fff;
     box-shadow: var(--shadow)
+}
+
+.certificate-document {
+    display: block;
+    margin: 22px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    transition: transform .25s ease, box-shadow .25s ease
+}
+
+.certificate-document:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px #3867f22b
+}
+
+.certificate-document img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 440px;
+    object-fit: contain;
+    background: #fff
 }
 
 .certificate-image {
@@ -804,6 +880,14 @@ dialog>#modal-summary {
     font-weight: 700
 }
 
+.certificate-link {
+    transition: color .2s ease
+}
+
+.certificate-link:hover {
+    color: #1e4ed8
+}
+
 @media(max-width:760px) {
     .certificate-card {
         grid-template-columns: 1fr
@@ -815,6 +899,10 @@ dialog>#modal-summary {
 
     .certificate-image {
         padding: 12px
+    }
+
+    .certificate-document {
+        margin: 12px
     }
 }
 
@@ -842,9 +930,10 @@ dialog h2 {
 }
 
 .hero {
-    min-height: 640px;
-    padding-top: 130px;
-    padding-bottom: 58px
+    min-height: 100svh;
+    /* Keep the introductory text and portrait centred in the viewport. */
+    padding-top: 84px;
+    padding-bottom: 84px
 }
 
 .hero h1 {
