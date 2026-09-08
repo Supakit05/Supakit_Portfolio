@@ -553,14 +553,47 @@ dd {
 }
 
 .contact-icon {
+    display: block;
+    flex: 0 0 19px;
     width: 19px;
     height: 19px;
-    color: #9cb6ff
+    color: #9cb6ff;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.8;
     stroke-linecap: round;
     stroke-linejoin: round
+}
+
+/* iPad Pro 10.5 in portrait is too narrow for the desktop hero columns. */
+@media (min-width: 761px) and (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .portrait-wrap {
+        grid-row: 1;
+        justify-self: center;
+        width: min(54%, 330px);
+    }
+
+    .hero-copy {
+        grid-row: 2;
+        max-width: 680px;
+        justify-self: center;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
 }
 
 footer {
