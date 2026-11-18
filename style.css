@@ -180,8 +180,8 @@ h2 em {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 82px
+    grid-template-columns: .9fr 1.1fr;
+    gap: 48px
 }
 
 .about h2,
